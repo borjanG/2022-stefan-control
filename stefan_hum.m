@@ -1,3 +1,8 @@
+
+%% Minimal L2 norm control for the linearized Stefan-Gibbs-Thomson problem
+
+%% Modules:
+
 clear
 close all
 import casadi.*
@@ -90,16 +95,15 @@ A(nx*(nx+1)+1:(nx+1)*(nx+1), (nx-2)*(nx+1)+1:(nx-1)*(nx+1)) = A4;
 mu = 1;
 A = sparse(mu*A);
 
-
 %% Time-stepping: CFL condition to change 'nt'.
 tline = linspace(0, T, nt+1); 
 dt = tline(2)-tline(1);
 CFL = mu*dt/dx^2;
 
 %% ---- Input variables ---------
-opti = casadi.Opti();               %% CasADi function
-W = opti.variable((nx+1)^2, nt+1);      %% state trajectory
-U = opti.variable((nx+1)^2, nt+1);        %% control
+opti = casadi.Opti();                       %% CasADi function
+W = opti.variable((nx+1)^2, nt+1);          %% state trajectory
+U = opti.variable((nx+1)^2, nt+1);          %% control
 
 %% ---- Dynamic constraints --------
 M = eye((nx+1)^2) - 0.5*dt*A;
@@ -129,13 +133,13 @@ p_opts = struct('expand', true);
 s_opts = struct('max_iter', 10000);     %% iteration limitation
 opti.solver('ipopt', p_opts, s_opts);   %% set numerical backend
 
-tic
 sol = opti.solve();                     %% actual solve
 Sol_u = sol.value(U);                   %% solved control function
 Sol_x = sol.value(W);
 time_axis = linspace(0, T, nt+1);
 
-%% Plotting 
+%% Plotting control 
+
 plot(time_axis, sum(Sol_u.^2)*dx, 'linewidth', 3, 'color', 'b')
 
 ax = gca;
@@ -146,10 +150,9 @@ set(gca,'XMinorTick','on','YMinorTick','on')
 grid minor
 ax.GridLineStyle = ':';
 ax.MinorGridLineStyle = 'none';
-exportgraphics(ax, 'stefan_hum_control.pdf', 'ContentType', 'vector')
-toc
+exportgraphics(ax, 'stefan_hum_control.pdf', 'ContentType', 'vector')x
 
-%% Plotting
+%% Plotting videos
 
 % Splitting Y and H
 Y = Sol_x(1:(nx+1)*nx, :);
@@ -183,11 +186,6 @@ for t = 1:nt+1
     zlim([-lim lim])
     camlight
     lighting phong
-%     z.AmbientStrength = 0.3;
-%     z.DiffuseStrength = 0.8;
-%     z.SpecularStrength = 0.9;
-%     z.SpecularExponent = 25;
-%     z.BackFaceLighting = 'unlit';
     shading interp
     caxis([-lim, lim])
     drawnow
@@ -234,7 +232,6 @@ for t = 1:nt+1
         imwrite(imind,cm,filename2,'gif','WriteMode','append');
     end
     if t==1 || t==10 || t==nt/4 || t==nt/2 || t==3*nt/4 || t==nt-10 || t==nt+1
-    %if t==1 || t==floor((nt+1)/4) || t==floor(3*(nt+1)/4) || t==nt+1
         exportgraphics(ax, strcat('stefan_h_', num2str(t), '.pdf'), 'ContentType', 'vector');
     end
 end
