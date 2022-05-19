@@ -12,7 +12,7 @@ Matlab (CasADi-IPOPT) codes for the paper "*Control of the linearized Stefan pro
 ```
 
 <p align="center">
-  <img src="figures/stefan-video.gif" alt="animated" />
+  <img src="figures/stefan-video.gif" alt="animated" width="200"/>
 </p>
 
 **Abstract.** *In this paper we consider the linearized one-phase Stefan problem with surface tension, set in the strip $\T\times(-1,1)$, thus with periodic boundary conditions respect to the horizontal direction $x_1\in\T$.  
