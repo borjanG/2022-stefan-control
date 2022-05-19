@@ -4,7 +4,10 @@
 
 <p align="center">
   <img src="figures/stefan-video.gif" alt="animated" width="300"/>
-  [![DOI:10.1007/978-3-319-76207-4_15](https://zenodo.org/badge/DOI/110.48550/arXiv.2203.03012.svg)](https://doi.org/10.48550/arXiv.2203.03012)
+</p>
+
+<p align="center">
+[![DOI:10.1007/978-3-319-76207-4_15](https://zenodo.org/badge/DOI/110.48550/arXiv.2203.03012.svg)](https://doi.org/10.48550/arXiv.2203.03012)
 </p>
 
 **Abstract.** *In this paper we consider the linearized one-phase Stefan problem with surface tension, set in the strip $\T\times(-1,1)$, thus with periodic boundary conditions respect to the horizontal direction $x_1\in\T$.  
