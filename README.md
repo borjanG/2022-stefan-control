@@ -3,13 +3,14 @@
   Control of the linearized Stefan problem in a periodic box
 </h1>
 
-<tt>Matlab</tt> (CasADi-IPOPT) codes for the paper "*Control of the linearized Stefan problem in a periodic box*" by Borjan Geshkovski and Debayan Maity. 
+<tt>Matlab</tt> (<tt>CasADi-IPOPT</tt>) codes for the paper "*Control of the linearized Stefan problem in a periodic box*" by Borjan Geshkovski and Debayan Maity. 
 
 <p align="center">
   <img src="figures/stefan-video.gif" alt="animated" width="300"/>
 </p>
 
 <p align="center">
+  [<img src="https://zenodo.org/badge/DOI/110.48550/arXiv.2203.03012.svg">](https://doi.org/10.48550/arXiv.2203.03012)
 [![DOI:10.1007/978-3-319-76207-4_15](https://zenodo.org/badge/DOI/110.48550/arXiv.2203.03012.svg)](https://doi.org/10.48550/arXiv.2203.03012)
 </p>
 
