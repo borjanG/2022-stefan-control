@@ -1,4 +1,7 @@
-# Control of the linearized Stefan problem in a periodic box
+<!-- Title -->
+<h1 align="center">
+  Control of the linearized Stefan problem in a periodic box
+</h1>
 
 <tt>Matlab</tt> (CasADi-IPOPT) codes for the paper "*Control of the linearized Stefan problem in a periodic box*" by Borjan Geshkovski and Debayan Maity. 
 
