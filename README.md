@@ -1,6 +1,6 @@
 # Control of the linearized Stefan problem in a periodic box
 
-Matlab (CasADi-IPOPT) codes for the paper "**Control of the linearized Stefan problem in a periodic box*" by Borjan Geshkovski and Debayan Maity. 
+Matlab (CasADi-IPOPT) codes for the paper "*Control of the linearized Stefan problem in a periodic box*" by Borjan Geshkovski and Debayan Maity. 
 
 ```
 @article{geshkovski2022control,
@@ -12,7 +12,7 @@ Matlab (CasADi-IPOPT) codes for the paper "**Control of the linearized Stefan pr
 ```
 
 <p align="center">
-![ezgif-1-2d3104c128](https://user-images.githubusercontent.com/10469801/169388708-1cc9651f-e913-4286-8c07-dd9e272e015d.gif)
+  <img src="figures/stefan-state.gif" alt="animated" />
 </p>
 
 **Abstract.** *In this paper we consider the linearized one-phase Stefan problem with surface tension, set in the strip $\T\times(-1,1)$, thus with periodic boundary conditions respect to the horizontal direction $x_1\in\T$.  
