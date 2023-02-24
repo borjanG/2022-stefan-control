@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://zenodo.org/badge/DOI/10.1017/S0962492922000046.svg" link="https://doi.org/10.1017/S0962492922000046">
+  <img src="https://zenodo.org/badge/DOI/10.1142/S0218202523500136.svg" link="https://doi.org/10.1142/S0218202523500136">
 </p>
 
 <tt>Matlab</tt> (<tt>CasADi-IPOPT</tt>) codes for the paper 
