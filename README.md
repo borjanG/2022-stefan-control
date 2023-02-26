@@ -20,7 +20,7 @@
 
 ## Citing
 
-```
+```bibtex
 @article{geshkovski2022control,
   title={Control of the linearized Stefan problem in a periodic box},
   author={Geshkovski, Borjan and Maity, Debayan},
